@@ -1,0 +1,18 @@
+{
+  "pages":[
+    "pages/newsList/newsList",
+    "pages/detail/detail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "新闻头条 小程序",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh":true
+  },
+  "networkTimeout":{
+    "request":10000,
+    "downloadFile":10000
+  },
+  "debug":true
+}

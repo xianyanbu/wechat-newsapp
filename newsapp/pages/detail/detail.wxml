@@ -1,0 +1,21 @@
+<view class="detail-main">
+  <view class="detail-post">
+    <view class="detail-post-header">
+      <view class="detail-post-title">{{ detail.title }}</view>
+    <view class="detail-post-meta">
+      <view class="detail-post-info">
+        <view class="detail-post-time">{{ detail.src }}</view>
+      </view>
+    </view>
+    </view>
+    <view class="detail-post-content" wx:for="{{detail.item}}">
+      <text class="content-info" index="{{index}}" wx:if="{{item.type == 'text'}}">{{ item.content }}</text>
+      <image class="content-info" index="{{index}}" wx:elif="{{item.type == 'img'}}" src="{{item.content}}"></image>
+    </view>
+    <view class="end"></view>
+  </view>
+
+  <loading hidden="{{hidden}}">
+    加载中...
+  </loading>
+</view>

@@ -1,0 +1,30 @@
+<view class="topics-main">
+  <view class="top-bar">
+    <view class="top-bar-item" id="top" catchtap="onTapTag">头条</view>
+    <view class="top-bar-item" id="shehui" catchtap="onTapTag">社会</view>
+    <view class="top-bar-item" id="guonei" catchtap="onTapTag">国内</view>
+    <view class="top-bar-item" id="guoji" catchtap="onTapTag">国际</view>
+    <view class="top-bar-item" id="yule" catchtap="onTapTag">娱乐</view>
+    <view class="top-bar-item" id="tiyu" catchtap="onTapTag">体育</view>
+    <view class="top-bar-item" id="junshi" catchtap="onTapTag">军事</view>
+    <view class="top-bar-item" id="keji" catchtap="onTapTag">科技</view>
+    <view class="top-bar-item" id="caijing" catchtap="onTapTag">财经</view>
+    <view class="top-bar-item" id="shishang" catchtap="onTapTag">时尚</view>
+  </view>
+  <scroll-view class="posts-list" style="height:100%" scroll-y="true">
+    <block wx:for="{{postsList}}">
+      <view class="posts-item" index="{{index}}" id="{{item.url}}" catchtap="redictDetail">
+          <image class="author-avatar" src="{{item.thumbnail_pic_s}}"></image>
+        <view class="posts-title">{{item.title}}</view>
+        <view class="author">
+          <view class="author-name">{{item.author_name}}</view>
+          <view class="posts-last-reply">{{item.last_reply_at}}</view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+
+  <loading hidden="{{hidden}}">
+    加载中...
+  </loading>
+</view>
