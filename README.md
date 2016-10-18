@@ -4,7 +4,7 @@
 
 ## 演示效果如下
 
-​                                                         ![demo](images/GIF.gif)\
+​                                              ![demo](images/GIF.gif)\
 
 
 
