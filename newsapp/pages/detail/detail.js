@@ -22,7 +22,7 @@ Page( {
     wx.request( {
       url: Api.getNewsByUrl( id ),
       success: function( res ) {
-
+console.log(res);
         var arrContent = [];
 
         var tmpStr = res.data;
@@ -84,8 +84,10 @@ Page( {
             // console.log(img);
             // 默认图片类型为jpg
             var imgType = 'jpeg';
-            if( img[ 0 ].indexOf( ".jpeg" ) == -1 ) {
+            if( img[ 0 ].indexOf( ".png" ) != -1 ) {
               imgType = 'png';
+            }else if(img[ 0 ].indexOf( ".gif" ) != -1){
+imgType = 'gif';
             }
             var content = img[ 0 ].substring( img[ 0 ].indexOf( "http" ), img[ 0 ].indexOf( imgType ) + imgType.length );
             tmpObj.type = 'img';
